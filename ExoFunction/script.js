@@ -35,3 +35,22 @@ function sumTab(tab){
 
 console.log(wordLen(tabMot));
 
+
+function isBis(year){
+    return (year%4===0 && year%100 != 0) ||year%400 === 0?true:false
+}
+
+console.log(isBis(1601))
+
+
+function newList(tab){
+    const unorderedList = document.createElement('ul');
+    for(w of tab){
+        const li = document.createElement('li');
+        li.innerHTML = w;
+        unorderedList.appendChild(li);
+    }
+    document.body.appendChild(unorderedList);
+}
+
+newList(tabMot);
