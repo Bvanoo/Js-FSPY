@@ -47,7 +47,7 @@ function newList(tab){
     const unorderedList = document.createElement('ul');
     for(w of tab){
         const li = document.createElement('li');
-        li.innerHTML = w;
+        li.textContent = w;
         unorderedList.appendChild(li);
     }
     document.body.appendChild(unorderedList);
